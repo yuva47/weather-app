@@ -9,8 +9,9 @@ const foreCast = (data, callback) => {
       callback(body.error.info, undefined);
     } else {
       const data = body;
+      console.log(data);
       callback(undefined, {
-        msg: `${data?.current?.weather_descriptions}. Its currently ${data?.current?.temperature} out. Its feels like ${data?.current?.feelslike} out`,
+        msg: `${data?.current?.weather_descriptions}. Its currently ${data?.current?.temperature} out. Its feels like ${data?.current?.feelslike} out.Humidity:${data.current?.humidity}`,
       });
     }
   });
