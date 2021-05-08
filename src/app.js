@@ -20,7 +20,7 @@ hbs.registerPartials(partialPath);
 
 app.get("", (req, res) => {
   const title = "Weather";
-  const footer = "Created by Isaac.";
+  const footer = "Created by me.";
   res.render("index", { title, footer });
 });
 
