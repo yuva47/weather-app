@@ -1,5 +1,3 @@
-let url = window.location.href;
-
 let form = document.querySelector("form");
 let address = document.getElementById("location");
 let msgOne = document.querySelector("#msg-1");
@@ -9,7 +7,7 @@ form.addEventListener("submit", (e) => {
   msgOne.textContent = "Loading...";
   msgTwo.textContent = "";
   e.preventDefault();
-  fetch(`${url.split("/")[0]}/weather?address=${address.value}`)
+  fetch(`/weather?address=${address.value}`)
     .then((response) => response.json())
     .then((data) => {
       if (data.error) {

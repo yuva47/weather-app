@@ -1,6 +1,8 @@
 const express = require("express");
 const config = require("./config.json");
 const app = express();
+const port = process.env.PORT || 3000;
+
 const path = require("path");
 const hbs = require("hbs");
 const geoCode = require("./utils/geocode");
@@ -77,6 +79,6 @@ app.get("*", (req, res) => {
   res.render("404", { title, msg, footer });
 });
 
-app.listen(config.port || 1000, () => {
+app.listen(port, () => {
   console.log(`Hosting Started in port ${config.port || 1000}`);
 });
