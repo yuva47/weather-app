@@ -27,21 +27,21 @@ app.get("", (req, res) => {
 app.get("/about", (req, res) => {
   const title = "About Me";
   const imgSrc = "./img/robot.png";
-  const footer = "Created by Isaac.";
+  const footer = "Created by me.";
   res.render("about", { title, imgSrc, footer });
 });
 
 app.get("/help", (req, res) => {
   const title = "Help";
   const msg = "Some message";
-  const footer = "Created by Isaac.";
+  const footer = "Created by me.";
   res.render("help", { title, msg, footer });
 });
 
 app.get("/help/*", (req, res) => {
   const title = "404";
   const msg = "Article not found";
-  const footer = "Created by Isaac.";
+  const footer = "Created by me.";
   res.render("404", { title, msg, footer });
 });
 
